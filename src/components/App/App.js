@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import '../SearchBar/SearchBar';
-import '../SearchResult/SearchResult';
-import '../PlayList/PlayList';
+import SearchBar from '../SearchBar/SearchBar';
+import SearchResult from '../SearchResult/SearchResult';
+import PlayList from '../PlayList/PlayList';
 
 
-function App() {
-  return (
-    <div>
-      <h1>Ja<span className="highlight">mmm</span>ing</h1>
-      <div className="App">
-        <SearchBar />
-        <div className="App-playlist">
-          <SearchResult />
-          <PlayList />
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Ja<span className="highlight">mmm</span>ing</h1>
+        <div className="App">
+          <SearchBar />
+          <div className="App-playlist">
+            <SearchResult />
+            <PlayList />
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
